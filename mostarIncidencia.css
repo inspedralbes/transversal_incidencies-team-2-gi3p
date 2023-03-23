@@ -1,0 +1,39 @@
+
+h1{
+    padding-top: 3%;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.form-group{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-control{
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    margin-top: 25px;
+}
+.contenedor{
+    margin: auto;
+    width: 50%;
+    background-color:#F4F4F4;
+    border-radius: 7px;
+    
+}
+.accordion{
+    padding-top: 3%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+footer{
+    position:absolute;
+    bottom: 0; 
+    width: 100%;
+    left: 0;
+}

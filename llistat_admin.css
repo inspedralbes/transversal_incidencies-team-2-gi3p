@@ -1,0 +1,160 @@
+
+.id{
+    grid-area: id;
+}
+.aula{
+    grid-area: aula;
+
+}
+.desc{
+    grid-area: desc;
+}
+.prio{
+    grid-area: prio;
+}
+.data{
+    grid-area: data;
+}
+.resolt{
+    grid-area: resolt;
+}
+.tipus{
+    grid-area: tipus;
+}
+.tecnic{
+    grid-area: tecnic;
+}
+.editar{
+    grid-area: editar;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+#sticky{
+    background: rgb(59, 59, 59);
+    color: white;
+    position: sticky;
+    top: 0px;
+}
+
+#desc{
+    text-align: justify;
+    vertical-align: middle;
+}
+#g>.desc{
+    padding-left: 2%;
+}
+
+.grid1{
+    width: 100%;
+    margin: auto;
+}
+
+.grid2:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+#head:hover{
+    background-color: rgb(59, 59, 59);
+}
+
+#g:hover{
+    background-color: rgb(255, 187, 61);
+}
+
+#head{
+    background: rgb(59, 59, 59);
+    color: white;
+    position: sticky;
+    top: 0px;
+}
+
+.titol{
+    width: 100%;
+    margin: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+} 
+
+.grid2{
+    display: grid;
+    grid-template-areas:'id aula data prio'
+     'desc desc desc editar'
+     'resolt tipus tecnic editar';
+    width: 100%;
+    gap: 10px;
+    text-align: center;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.grid2>.desc{
+    text-align: left;
+    padding-left: 11%;
+}
+
+@media only screen and (min-width: 700px) {
+
+    #g{
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    .titol{
+        width: 90%;
+        margin: auto;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    .grid2:nth-child(even) {
+        background-color: #e0e0e0;
+    }
+
+    .grid2:hover{
+        background-color: rgb(255, 187, 61);
+    }
+        
+    .grid1{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+        
+    .grid2{
+        display: grid;
+        grid-template-areas: 'id aula desc data prio resolt tipus tecnic editar';
+        grid-template-columns: 3% 12% 1fr 9% 5% 7% 7% 7% 8%;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid black;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        gap: 20px;
+    }
+    div>p{
+        display: inline-block;
+        vertical-align: middle;
+    }
+        
+    #desc{
+        text-align: justify;
+    }
+
+}

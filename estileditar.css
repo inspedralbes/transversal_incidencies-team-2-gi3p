@@ -1,0 +1,15 @@
+.centrat{
+    width: max-content;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.formcentrat{
+    width: fit-content;
+    margin: auto;
+}
+
+.form-select{
+    display: inline;
+    width: 100%;
+}

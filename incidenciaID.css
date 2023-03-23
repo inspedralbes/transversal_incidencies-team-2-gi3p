@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+    padding-top: 20%;
+
+}
+footer{
+    position:absolute;
+    bottom: 0; 
+    width: 100%;
+    left: 0;
+}
+.id{
+    padding-top: 2%;
+    text-align: center;
+}

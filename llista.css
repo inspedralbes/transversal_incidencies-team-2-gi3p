@@ -1,0 +1,112 @@
+.id{
+    grid-area: id;
+}
+.aula{
+    grid-area: aula;
+
+}
+.desc{
+    grid-area: desc;
+}
+.data{
+    grid-area: data;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+#head{
+    background: rgb(59, 59, 59);
+    color: white;
+    position: sticky;
+    top: 0px;
+}
+
+.grid1{
+    width: 80%;
+    margin: auto;
+}
+
+.grid2:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+.grid2:hover{
+    background-color: rgb(255, 187, 61);
+}
+
+.titol{
+    width: 80%;
+    margin: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.grid2{
+    display: grid;
+    grid-template-areas:'id aula data'
+     'desc desc desc';
+    text-align: justify;
+    width: 100%;
+    gap: 10px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+
+@media only screen and (min-width: 700px) {
+
+    #head{
+        background: rgb(59, 59, 59);
+        color: white;
+        position: sticky;
+        top: 0px;
+    }
+
+    .titol{
+        width: 80%;
+        margin: auto;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    .grid2:nth-child(even) {
+        background-color: #e0e0e0;
+    }
+
+    .grid2:hover{
+        background-color: rgb(255, 187, 61);
+    }
+        
+    .grid1{
+        width: 80%;
+        margin: auto;
+    }
+
+    .grid2>div{
+        padding-top: 10px;
+    }
+
+    .grid2{
+        display: grid;
+        grid-template-areas: 'id aula desc data';
+        grid-template-columns: 3% 4% 1fr 10%;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid black;
+        gap: 20px;
+    }
+        
+    #desc{
+        text-align: justify;
+    }
+
+}

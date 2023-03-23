@@ -1,0 +1,29 @@
+
+.form-select{
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contenidor{
+    width: 50%;
+    margin-top: 5%;
+    background-color:#F4F4F4;
+    border-radius: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+.form-control{
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+footer{
+    position:absolute;
+    bottom: 0; 
+    width: 100%;
+    left: 0;
+}
