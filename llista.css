@@ -58,6 +58,11 @@ body{
     border-bottom: 1px solid black;
 }
 
+footer{
+    bottom: 0; 
+    width: 100%;
+    margin-left: 0px;
+}
 
 @media only screen and (min-width: 700px) {
 
@@ -107,6 +112,12 @@ body{
         
     #desc{
         text-align: justify;
+    }
+
+    footer{
+        bottom: 0; 
+        width: 100%;
+        margin-left: 0px;
     }
 
 }

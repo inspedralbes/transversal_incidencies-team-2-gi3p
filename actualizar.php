@@ -11,5 +11,5 @@ prioritat = ?
 WHERE idInc = ?");
 $sentencia->bind_param("iisi", $tipus, $tecnic, $prioritat, $id);
 $sentencia->execute();
-header("Location: llistat_incidencies_p.php");
+header("Location: llistat_admin.php");
 ?>

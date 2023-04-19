@@ -7,5 +7,5 @@ dataFi = ?
 WHERE idInc = ?");
 $sentencia->bind_param("si", $dataFinal, $id);
 $sentencia->execute();
-header("Location: gestionarIncidencia.php?idInc=$id");
+header("Location: llistat_admin.php");
 ?>

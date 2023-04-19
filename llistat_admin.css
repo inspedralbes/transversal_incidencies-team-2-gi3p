@@ -53,10 +53,6 @@ body{
     margin: auto;
 }
 
-.grid2:nth-child(even) {
-    background-color: #e0e0e0;
-}
-
 #head:hover{
     background-color: rgb(59, 59, 59);
 }
@@ -69,18 +65,9 @@ body{
     background: rgb(59, 59, 59);
     color: white;
     position: sticky;
+    padding-top: 15px;
     top: 0px;
 }
-
-.titol{
-    width: 100%;
-    margin: auto;
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding-top: 7px;
-    padding-bottom: 7px;
-} 
 
 .grid2{
     display: grid;
@@ -103,25 +90,33 @@ body{
     padding-left: 11%;
 }
 
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: greenyellow;
+}
+
+.white{
+    background-color: white;
+}
+
+footer{
+    bottom: 0; 
+    width: 100%;
+    margin-left: 0px;
+}
+
 @media only screen and (min-width: 700px) {
 
     #g{
         padding-top: 6px;
         padding-bottom: 6px;
-    }
-
-    .titol{
-        width: 90%;
-        margin: auto;
-        background-color: black;
-        color: white;
-        text-align: center;
-        padding-top: 7px;
-        padding-bottom: 7px;
-    }
-
-    .grid2:nth-child(even) {
-        background-color: #e0e0e0;
     }
 
     .grid2:hover{
@@ -131,7 +126,6 @@ body{
     .grid1{
         width: 90%;
         margin: auto;
-        margin-bottom: 20px;
     }
         
     .grid2{
@@ -155,6 +149,12 @@ body{
         
     #desc{
         text-align: justify;
+    }
+
+    footer{
+        bottom: 0; 
+        width: 100%;
+        margin-left: 0px;
     }
 
 }

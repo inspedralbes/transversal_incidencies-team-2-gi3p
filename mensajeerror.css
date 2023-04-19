@@ -1,0 +1,18 @@
+img{
+    width:80px;
+    padding-bottom:29px;
+}
+h5{
+    margin-left:25px;
+    margin-right:25px;
+}
+.text{
+    font-size:20px;
+    margin-top:25px;
+}
+
+footer{
+    bottom: 0; 
+    width: 100%;
+    margin-left: 0px;
+}

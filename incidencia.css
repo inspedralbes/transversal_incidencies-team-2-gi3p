@@ -5,6 +5,9 @@
     margin-left: auto;
     margin-right: auto;
 }
+.block{
+    display: block;
+}
 .contenidor{
     width: 50%;
     margin-top: 5%;
@@ -22,8 +25,7 @@
     width: 75%;
 }
 footer{
-    position:absolute;
     bottom: 0; 
     width: 100%;
-    left: 0;
+    margin-left: 0px;
 }

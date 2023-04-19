@@ -1,7 +1,7 @@
 <?php
 $mysqli = include_once "conectar.php";
 $id = $_GET["IdIncidencia"];
-$sentencia = $mysqli->prepare("SELECT idInc, data, prioritat, descripcio, resolt, TIPOLOGIA.nomTip, TECNIC.nomTec, DEPARTAMENT.nomDep FROM INCIDENCIA 
+$sentencia = $mysqli->prepare("SELECT idInc, data, prioritat, descripcio, dataFi, TIPOLOGIA.nomTip, TECNIC.nomTec, DEPARTAMENT.nomDep FROM INCIDENCIA 
 LEFT JOIN TIPOLOGIA 
 ON TIPOLOGIA.idTip = INCIDENCIA.tipus
 LEFT JOIN TECNIC
@@ -21,7 +21,7 @@ $resultat_actuacio = $sentencia_actuacio->get_result();
 $actuacio = $resultat_actuacio->fetch_all(MYSQLI_ASSOC);
 
 if (!$incidencia) {
-    exit("No hay resultados para ese ID");
+    header("Location:mensajeerrorincidencia.php");
 }
 ?>
 
@@ -48,29 +48,38 @@ if (!$incidencia) {
             <textarea class="form-control" id="descripcio" rows="3" readonly><?php echo $incidencia["descripcio"] ?></textarea> 
         </div>
     </div>
+    
     <div class="accordion" id="accordion">
         <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Actuacions
-                </button>
-            </h2>
-            <?php
-            foreach ($actuacio as $actuacio) { ?>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p><?php echo $actuacio["descripcio"]?>  </p>
-                           
-                    </div>
-            <?php } ?>
-        
-    </div>
-  </div>
-    </div>
+            <?php $cont = 1;?> 
+            <?php foreach ($actuacio as $actuacio ){?>
+            
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo $actuacio["idAct"]?>" aria-expanded="false" aria-controls="collapseTwo">
+                        Actuació <?php echo $cont?>
+                    </button>
+                </h2>
+                <?php $cont++;?>
+                <div id="<?php echo $actuacio["idAct"]?>" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                    
+                        <div class="accordion-body">
+                            <p><?php echo $actuacio["descripcio"]?> <br> Temps invertit: 
+                            <?php if ($actuacio["tempsInvrt"] > 0 ) {
+                                echo $actuacio["tempsInvrt"];
+                                
+                            }else {
+                                echo "0";
+                            }
+                            echo " minuts";?></p>
+                        </div>
+                </div>
+            
+            <?php } ?>  
+        </div>
     
+    </div>
     <footer>
         <?php include("footer.php")?>
     </footer>
-    
 </body>
 </html>
